@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-blue-600 text-white shadow-md">
+<nav x-data="{ open: false }" class="bg-blue-600 dark:bg-gray-900 text-white shadow-md">
     <!-- Header -->
     <header class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="{{ route('dashboard') }}" class="text-2xl font-bold">al-library</a>
@@ -8,9 +8,9 @@
             name="search"
             placeholder="Search books..."
             value="{{ request('search') }}"
-            class="pl-8 pr-4 py-2 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class="pl-8 pr-4 py-2 rounded-full text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600"
             />
-            <svg class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
             </svg>
         </form>

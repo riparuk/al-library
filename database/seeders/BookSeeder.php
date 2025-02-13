@@ -16,14 +16,13 @@ class BookSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; $i < 100; $i++) { // Ubah angka 10 sesuai jumlah data yang diinginkan
+        for ($i = 0; $i < 5; $i++) { // Ubah angka 10 sesuai jumlah data yang diinginkan
             Book::create([
                 'title' => $faker->sentence(3), // Judul dengan 3 kata
                 'author' => $faker->name(),
                 'publisher' => $faker->company(),
                 'year' => $faker->year(),
                 'description' => $faker->paragraph(),
-                'cover_image' => 'https://picsum.photos/seed/200/300', // Gambar dari Picsum
             ]);
         }
     }

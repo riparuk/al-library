@@ -1,2 +1,5 @@
 *
 !.gitignore
+!covers/
+# !covers/**
+!covers/no-image.png

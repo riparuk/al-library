@@ -1,30 +1,37 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Detail Buku') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white shadow-xl sm:rounded-lg p-6">
-                <h1 class="text-2xl font-bold mb-4">{{ $book->title }}</h1>
-                <p><strong>Penulis:</strong> {{ $book->author }}</p>
-                <p><strong>Penerbit:</strong> {{ $book->publisher }}</p>
-                <p><strong>Tahun:</strong> {{ $book->year }}</p>
-                <p><strong>Deskripsi:</strong> {{ $book->description }}</p>
-
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg">
                 @if($book->cover_image)
-                    <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover Buku" class="mt-4 w-48">
+                    <div class="flex justify-center bg-white dark:bg-gray-700 rounded-lg">
+                        <img src="{{ asset('/storage/' . $book->cover_image) }}" alt="Cover Buku" class="w-1/2">
+                    </div>
+                @else
+                    <div class="flex justify-center bg-white dark:bg-gray-700 rounded-lg">
+                        <img src="/storage/covers/no-image.png" alt="No Image" class="w-1/2">
+                    </div>
                 @endif
+                <div class="p-6">
+                    <h1 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-200">{{ $book->title }}</h1>
+                    <p class="text-gray-600 dark:text-gray-400 font-light">By <span class="font-bold">{{ $book->author }}</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 font-light">Publisher <span class="font-bold">{{ $book->publisher }}</span></p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm font-extralight">Published in {{ $book->year }}</p>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400 font-thin">{{ $book->description }}</p>
 
-                <div class="mt-6">
-                    <a href="{{ route('books.edit', $book->id) }}" class="bg-blue-500 text-white px-4 py-2 rounded ml-2">Edit</a>
-                    <form action="{{ route('books.destroy', $book->id) }}" method="POST" class="inline-block">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded ml-2" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</button>
-                    </form>
+                    <div class="mt-6">
+                        <a href="{{ route('books.edit', $book->id) }}" class="bg-slate-500 dark:bg-slate-700 text-white px-4 py-2 rounded ml-2">Edit</a>
+                        <form action="{{ route('books.destroy', $book->id) }}" method="POST" class="inline-block">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="bg-red-400 dark:bg-red-600 text-white px-4 py-2 rounded ml-2" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
