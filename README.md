@@ -1,5 +1,5 @@
 # al-library
-
+by Rifa Faruqi
 al-library adalah proyek untuk mengelola data buku sederhana menggunakan Laravel 11. Proyek ini memiliki fitur-fitur berikut:
 
 - **Support Dark Mode**: Tampilan yang mendukung mode gelap.
