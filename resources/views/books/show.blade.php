@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Detail Buku') }}
+            {{ __('Book Detail') }}
         </h2>
     </x-slot>
 
@@ -10,7 +10,7 @@
             <div class="bg-gray-50 dark:bg-gray-800 rounded-lg">
                 @if($book->cover_image)
                     <div class="flex justify-center bg-white dark:bg-gray-700 rounded-lg">
-                        <img src="{{ asset('/storage/' . $book->cover_image) }}" alt="Cover Buku" class="w-1/2">
+                        <img src="{{ asset('/storage/' . $book->cover_image) }}" alt="Book Cover" class="w-1/2">
                     </div>
                 @else
                     <div class="flex justify-center bg-white dark:bg-gray-700 rounded-lg">
@@ -29,7 +29,7 @@
                         <form action="{{ route('books.destroy', $book->id) }}" method="POST" class="inline-block">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="bg-red-400 dark:bg-red-600 text-white px-4 py-2 rounded ml-2" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">Hapus</button>
+                            <button type="submit" class="bg-red-400 dark:bg-red-600 text-white px-4 py-2 rounded ml-2" onclick="return confirm('Are you sure want to delete this book?')">Delete</button>
                         </form>
                     </div>
                 </div>

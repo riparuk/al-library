@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Daftar Buku') }}
+            {{ __('List of Books') }}
         </h2>
     </x-slot>
 
@@ -15,7 +15,7 @@
                     <svg class="mr-2" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
                     </svg>
-                    Tambah Buku
+                    Add Book
                 </a>
             </div>
 
@@ -25,7 +25,6 @@
                     <a href="{{ route('books.show', $book->id) }}" class="block rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow duration-300">
                         <!-- Cover Image -->
                         <img src="{{ asset($book->cover_image ? 'storage/' . $book->cover_image : 'storage/covers/no-image.png') }}" alt="Cover {{ $book->title }}" class="w-1/2 h-56 object-cover mx-auto">
-                        {{-- <img src="{{ asset('storage/' . $book->cover_image) }}" alt="Cover {{ $book->title }}" class="w-full h-56 object-cover"> --}}
 
                         <!-- Content -->
                         <div class="p-4">

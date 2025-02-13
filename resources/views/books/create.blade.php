@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Tambah Buku') }}
+            {{ __('Add Book') }}
         </h2>
     </x-slot>
 
@@ -19,37 +19,37 @@
                 </div>
 
                 <div class="space-y-6">
-                    <!-- Judul -->
+                    <!-- Title -->
                     <div>
-                        <label for="title" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Judul</label>
+                        <label for="title" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Title</label>
                         <input type="text" id="title" name="title" x-model="title" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-gray-300" required>
                         <p class="text-red-500 text-sm" x-show="errors.title" x-text="errors.title"></p>
                     </div>
 
-                    <!-- Penulis -->
+                    <!-- Writer -->
                     <div>
-                        <label for="author" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Penulis</label>
+                        <label for="author" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Writer</label>
                         <input type="text" id="author" name="author" x-model="author" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-gray-300" required>
                         <p class="text-red-500 text-sm" x-show="errors.author" x-text="errors.author"></p>
                     </div>
 
-                    <!-- Penerbit -->
+                    <!-- Publisher -->
                     <div>
-                        <label for="publisher" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Penerbit</label>
+                        <label for="publisher" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Publisher</label>
                         <input type="text" id="publisher" name="publisher" x-model="publisher" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-gray-300" required>
                         <p class="text-red-500 text-sm" x-show="errors.publisher" x-text="errors.publisher"></p>
                     </div>
 
-                    <!-- Tahun Terbit -->
+                    <!-- Published year -->
                     <div>
-                        <label for="year" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Tahun Terbit</label>
+                        <label for="year" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Published year</label>
                         <input type="number" id="year" name="year" x-model="year" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-gray-300" required>
                         <p class="text-red-500 text-sm" x-show="errors.year" x-text="errors.year"></p>
                     </div>
 
-                    <!-- Deskripsi -->
+                    <!-- Description -->
                     <div>
-                        <label for="description" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Deskripsi</label>
+                        <label for="description" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Description</label>
                         <textarea id="description" name="description" rows="4" x-model="description" class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 dark:bg-gray-700 dark:text-gray-300" required></textarea>
                         <p class="text-red-500 text-sm" x-show="errors.description" x-text="errors.description"></p>
                     </div>
@@ -57,10 +57,10 @@
 
                 <div class="mt-8 flex justify-end space-x-4">
                     <a href="{{ route('dashboard') }}" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Batal
+                        Cancel
                     </a>
                     <button type="submit" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                        Simpan
+                        Save
                     </button>
                 </div>
             </form>

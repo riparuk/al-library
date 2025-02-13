@@ -27,10 +27,8 @@ class BookController extends Controller
 
     public function show($id)
     {
-        // Cari buku berdasarkan ID
         $book = Book::findOrFail($id);
 
-        // Kirim data buku ke view
         return view('books.show', compact('book'));
     }
 
@@ -105,14 +103,12 @@ class BookController extends Controller
 
     public function destroy(Book $book)
     {
-        // Hapus cover image jika ada
         if ($book->cover_image) {
             Storage::disk('public')->delete($book->cover_image);
         }
         
-        // Hapus buku dari database
         $book->delete();
 
-        return redirect()->route('dashboard')->with('success', 'Buku berhasil dihapus.');
+        return redirect()->route('dashboard')->with('success', 'Book deleted successfully.');
     }
 }
