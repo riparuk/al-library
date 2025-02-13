@@ -10,13 +10,13 @@ al-library adalah proyek untuk mengelola data buku sederhana menggunakan Laravel
 - **Cocok Dijadikan Starter**: Ideal untuk dijadikan proyek awal.
 - **Support Pagination**: Mendukung paginasi untuk navigasi data yang lebih mudah.
 
-## Instalasi
+## Instalasi (Worked on Linux & MacOS)
 
 Ikuti langkah-langkah berikut untuk menginstal proyek ini:
 
 1. Clone repository ini ke lokal Anda:
     ```bash
-    git clone https://github.com/username/al-library.git
+    git clone https://github.com/riparuk/al-library.git
     ```
 2. Navigasi ke direktori proyek:
     ```bash
